@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_signup_bg"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        >
+
+        <ImageView
+            android:id="@+id/act_binfo_back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="20dp"
+            android:src="@mipmap/back"/>
+
+        <TextView
+            android:id="@+id/act_binfo_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/act_pinfo_back_iv"
+            android:text="My Business Info"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_textsize"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/act_signup_name_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/business_name"
+                android:inputType="textEmailAddress"
+                android:textAppearance="@style/TextAppearance.App.TextInputLayout"
+                android:textSize="@dimen/normal_textsize"
+                app:met_autoValidate="true"
+                app:met_baseColor="@color/selected_color"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelAnimating="true"
+                app:met_floatingLabelTextColor="@color/black"
+                app:met_floatingLabelTextSize="@dimen/normal_textsize"
+                app:met_iconLeft="@mipmap/bname"
+                app:met_iconPadding="-5dp"
+                app:met_primaryColor="@color/selected_color"
+                app:met_textColor="@color/selected_color"
+                app:met_textColorHint="@color/unselected_color"
+                app:met_underlineColor="@color/unselected_color"
+                app:met_validateOnFocusLost="true"/>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
