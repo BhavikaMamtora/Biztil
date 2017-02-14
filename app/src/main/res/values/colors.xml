@@ -15,4 +15,6 @@
     <color name="selected_color">#00ACEC</color>
     <color name="unselected_color">#939393</color>
     <color name="unselected_floating_label">#808080</color>
+    <color name="layout_color">#fbfbfb</color>
+    <color name="layout_border_color">#d3d3d3</color>
 </resources>

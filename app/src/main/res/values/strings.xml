@@ -17,8 +17,19 @@
     <string name="register">Register</string>
     <string name="or_signup_with">OR SIGN UP WITH</string>
     <string name="business_name">Business Name</string>
-
     <string name="err_msg_name">Enter your full name</string>
     <string name="err_msg_email">Enter valid email address</string>
     <string name="err_msg_password">Enter the password</string>
+
+    <string-array name="business_type">
+        <item>Retailer</item>
+        <item>Exporter</item>
+        <item>Importer</item>
+        <item>Manufacturer</item>
+        <item>Service Provider</item>
+        <item>Wholesaler/Distributor</item>
+        <item>Supplier</item>
+        <item>Trading Company</item>
+    </string-array>
+
 </resources>

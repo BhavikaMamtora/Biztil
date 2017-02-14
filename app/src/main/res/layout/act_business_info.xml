@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:paddingBottom="10dp"
     >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,38 +39,204 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_marginTop="40dp"
+        android:fillViewport="true"
+        android:padding="20dp">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:layout_height="match_parent">
 
-            <com.rengwuxian.materialedittext.MaterialEditText
-                android:id="@+id/act_signup_name_edt"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/business_name"
-                android:inputType="textEmailAddress"
-                android:textAppearance="@style/TextAppearance.App.TextInputLayout"
-                android:textSize="@dimen/normal_textsize"
-                app:met_autoValidate="true"
-                app:met_baseColor="@color/selected_color"
-                app:met_floatingLabel="normal"
-                app:met_floatingLabelAnimating="true"
-                app:met_floatingLabelTextColor="@color/black"
-                app:met_floatingLabelTextSize="@dimen/normal_textsize"
-                app:met_iconLeft="@mipmap/bname"
-                app:met_iconPadding="-5dp"
-                app:met_primaryColor="@color/selected_color"
-                app:met_textColor="@color/selected_color"
-                app:met_textColorHint="@color/unselected_color"
-                app:met_underlineColor="@color/unselected_color"
-                app:met_validateOnFocusLost="true"/>
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                >
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/act_binfo_bname_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/business_name"
+                    android:inputType="textEmailAddress"
+                    android:textAppearance="@style/TextAppearance.App.TextInputLayout"
+                    android:textSize="@dimen/normal_textsize"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="@color/selected_color"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelAnimating="true"
+                    app:met_floatingLabelTextColor="@color/black"
+                    app:met_floatingLabelTextSize="@dimen/normal_textsize"
+                    app:met_iconLeft="@mipmap/bname"
+                    app:met_iconPadding="-5dp"
+                    app:met_primaryColor="@color/selected_color"
+                    app:met_textColor="@color/selected_color"
+                    app:met_textColorHint="@color/unselected_color"
+                    app:met_underlineColor="@color/unselected_color"
+                    app:met_validateOnFocusLost="true"/>
 
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
 
-        </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/act_binfo_type_busi_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingBottom="10dp"
+                        android:src="@mipmap/btype"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Type Of Business"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/unselected_color"
+                            android:textSize="@dimen/small_textsize"/>
+
+
+                        <RelativeLayout
+                            android:id="@+id/act_binfo_type_busi_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:background="@mipmap/dropboxgrey"
+                            android:orientation="horizontal"
+                            >
+
+                            <Button
+                                android:id="@+id/act_binfo_type_busi_spn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:textColor="@color/selected_color"
+                                android:layout_marginLeft="5dp"
+                                android:text="Select Type of Business"
+                                android:singleLine="true"
+                                android:layout_toLeftOf="@+id/act_binfo_type_busi_arrow"
+                                android:padding="10dp"
+                                android:background="@android:color/transparent"
+                                android:gravity="left|center"/>
+
+                            <ImageView
+                                android:id="@+id/act_binfo_type_busi_arrow"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:background="@drawable/dropboxdropdown"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/act_binfo_mult_catg_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingBottom="10dp"
+                        android:src="@mipmap/choosecat"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Business Category"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/unselected_color"
+                            android:textSize="@dimen/small_textsize"/>
+
+                        <RelativeLayout
+                            android:id="@+id/act_binfo_mult_catg_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:background="@mipmap/dropboxgrey"
+                            android:orientation="horizontal"
+                          >
+
+                            <Button
+                                android:id="@+id/act_binfo_mult_catg_spn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:textColor="@color/selected_color"
+                                android:text="Business Category"
+                                android:layout_marginLeft="5dp"
+                                android:padding="10dp"
+                                android:background="@android:color/transparent"
+                                android:gravity="left|center"/>
+
+                            <ImageView
+                                android:id="@+id/act_binfo_mult_catg_arrow"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/dropboxdropdown"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/act_binfo_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/etPasswordLayout"
+                android:layout_margin="10dp"
+                android:paddingLeft="-10dp"
+                android:paddingRight="-10dp"
+                android:background="@drawable/round_corner_blue_btn"
+                android:text="Finish"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
     </ScrollView>
 </LinearLayout>

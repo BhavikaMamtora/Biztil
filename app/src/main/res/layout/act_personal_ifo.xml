@@ -184,6 +184,7 @@
                                 android:layout_centerVertical="true"
                                 android:layout_gravity="center"
                                 android:layout_marginLeft="5dp"
+                                android:padding="10dp"
                                 android:background="@android:color/transparent"
                                 android:gravity="left"
                                 android:spinnerMode="dropdown"/>
@@ -215,6 +216,7 @@
                                 android:layout_centerVertical="true"
                                 android:layout_gravity="center"
                                 android:layout_marginLeft="5dp"
+                                android:padding="10dp"
                                 android:background="@android:color/transparent"
                                 android:gravity="left"
                                 android:spinnerMode="dropdown"/>
@@ -245,8 +247,10 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:layout_centerVertical="true"
+                                android:textAlignment="textStart"
                                 android:layout_gravity="center"
                                 android:layout_marginLeft="5dp"
+                                android:padding="10dp"
                                 android:background="@android:color/transparent"
                                 android:gravity="left"
                                 android:spinnerMode="dropdown"/>
@@ -276,6 +280,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/etPasswordLayout"
                 android:layout_margin="10dp"
+                android:paddingLeft="-10dp"
+                android:paddingRight="-10dp"
                 android:background="@drawable/round_corner_blue_btn"
                 android:text="Next"
                 android:textAllCaps="true"

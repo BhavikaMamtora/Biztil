@@ -1,5 +1,6 @@
 package com.d2d.biztil;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,9 +11,11 @@ import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -43,6 +46,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             act_signup_password_edt;
     Button act_signup_register_btn;
     private        SharedPreferences prefsPrivate;
+    Dialog verify_otp_dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -152,7 +156,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             isValidForm = false;
 
         }
-        else if (Methods.isValidEmail(act_sign_up_email_edt.getText().toString()) == true) {
+        else if (Methods.isValidEmail(act_sign_up_email_edt.getText().toString()) == false) {
 
             Methods.animRedTextMethod(SignUpActivity.this, "Please Enter Valid Email");
             isValidForm = false;
@@ -296,6 +300,134 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             pdiDialog.dismiss();
             if (result == true) {
 
+                verify_otp_dialog  = new Dialog(SignUpActivity.this);
+                verify_otp_dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                verify_otp_dialog.setCancelable(false);
+                verify_otp_dialog.setContentView(R.layout.otp_dialog);
+
+                final EditText otp_num_edt = (EditText) verify_otp_dialog.findViewById(R.id.otp_num_edt);
+
+                Button forgot_pswrd_verify_btn = (Button) verify_otp_dialog.findViewById(R.id.forgot_pswrd_verify_btn);
+                forgot_pswrd_verify_btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public
+                    void onClick(View v) {
+
+                        InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+
+                        inputManager.hideSoftInputFromWindow(getCurrentFocus()
+                                                                     .getWindowToken(),
+                                                             InputMethodManager.HIDE_NOT_ALWAYS);
+                        internet = new NetConnection(SignUpActivity.this);
+                        netConnection = internet.HaveNetworkConnection();
+
+                        if (netConnection == true) {
+
+                            new verifyOtpAsyncTask(otp_num_edt.getText().toString(),uid,iam,type,username).execute();
+
+                        }
+                        else {
+                            internet.showNetDialog(SignUpActivity.this);
+
+                        }
+
+
+                    }
+                });
+
+                verify_otp_dialog.show();
+
+
+
+
+            }
+            else {
+                Methods.animRedTextMethod(SignUpActivity.this, message);
+            }
+
+        }
+
+    }
+    class verifyOtpAsyncTask extends AsyncTask<Void, Boolean, Boolean> {
+        CustomProgressDialog pdiDialog;
+        String               otp_num, message,uid,iam,type,username;
+
+
+        public
+        verifyOtpAsyncTask(String otp_num, String uid,String iam,String type,String username) {
+            this.uid = uid;
+            this.otp_num = otp_num;
+
+            this.iam = iam;
+            this.type = type;
+            this.username = username;
+        }
+
+
+
+        @Override
+        protected
+        void onPreExecute() {
+            super.onPreExecute();
+            pdiDialog = new CustomProgressDialog(SignUpActivity.this);
+            pdiDialog.setMessage("Loading...");
+            pdiDialog.setCancelable(false);
+            pdiDialog.show();
+        }
+
+        @Override
+        protected
+        Boolean doInBackground(Void... params) {
+
+            boolean executedSuccefully = true;
+            // /////////////////////////
+            if (Build.VERSION.SDK_INT >= 9) {
+                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+                        .permitAll().build();
+
+                StrictMode.setThreadPolicy(policy);
+            }
+
+            // https://ipaysay.in/api/verifyotp.php?otp=74114&retailerid=3&distributorid=0
+
+            try {
+
+                String url = Web_url_api.otpVerificationUrlApi(otp_num,uid);
+
+                String responseString = WebServerCall.getDataFromServer(url);
+                Log.e("responseString", responseString);
+                JSONObject jsonObj = new JSONObject(responseString);
+                String successStr = jsonObj
+                        .getString(Json_keys.SUCCESS);
+                message = jsonObj
+                        .getString(Json_keys.MESSAGE);
+                if (successStr.equalsIgnoreCase("1")) {
+                    executedSuccefully = true;
+                }
+                else {
+                    executedSuccefully = false;
+                }
+
+            }
+            catch (Throwable e) {
+                // TODO Auto-generated catch block
+                executedSuccefully = false;
+                message = e.getMessage();
+
+            }
+            // ////////////////////////
+            return executedSuccefully;
+
+        }
+
+        @Override
+        protected
+        void onPostExecute(Boolean result) {
+            super.onPostExecute(result);
+            pdiDialog.dismiss();
+            verify_otp_dialog.dismiss();
+            if (result == true) {
+
                 prefsPrivate = getSharedPreferences(
                         Constants.PREFS_PRIVATE,
                         Context.MODE_PRIVATE
@@ -314,10 +446,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                         PrefsKeys.Login_Prefs_Keys.UID,
                         uid
                 );
-                prefsPrivateEdit.putString(
-                        PrefsKeys.Login_Prefs_Keys.OTP,
-                        otp
-                );
+
 
                 prefsPrivateEdit.putString(
                         PrefsKeys.Login_Prefs_Keys.USERNAME,
@@ -331,12 +460,14 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
 
                 prefsPrivateEdit.commit();
-                startActivity(new Intent(SignUpActivity.this, MainActivity.class));
-                finish();
 
+                Intent fp_np_intent = new Intent(SignUpActivity.this, PersonalInfoActivity.class);
+                startActivity(fp_np_intent);
+                finish();
 
             }
             else {
+
                 Methods.animRedTextMethod(SignUpActivity.this, message);
             }
 
