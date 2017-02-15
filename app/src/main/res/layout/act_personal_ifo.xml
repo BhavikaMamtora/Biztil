@@ -201,37 +201,7 @@
                                 android:src="@mipmap/dropboxdropdown"/>
                         </RelativeLayout>
 
-                        <!-- <RelativeLayout
-                            android:id="@+id/act_pinfo_day_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_weight="1"
-                            android:background="@mipmap/dropboxgrey"
-                            android:orientation="horizontal">
 
-                            <Spinner
-                                android:id="@+id/act_pinfo_day_spn"
-                                android:layout_width="60dp"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="5dp"
-                                android:padding="10dp"
-                                android:background="@android:color/transparent"
-                                android:gravity="left"
-                                android:spinnerMode="dropdown"/>
-
-                            <ImageView
-                                android:id="@+id/act_pinfo_day_arrow"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentRight="true"
-                                android:layout_centerVertical="true"
-                                android:layout_gravity="center"
-                                android:src="@mipmap/dropboxdropdown"/>
-
-                        </RelativeLayout> -->
 
                         <RelativeLayout
                             android:id="@+id/act_pinfo_month_layout"
@@ -266,38 +236,7 @@
                                 android:src="@mipmap/dropboxdropdown"/>
                         </RelativeLayout>
 
-                        <!-- <RelativeLayout
-                            android:id="@+id/act_pinfo_month_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_weight="1"
-                            android:background="@mipmap/dropboxgrey"
-                            android:orientation="horizontal">
 
-                            <Spinner
-                                android:id="@+id/act_pinfo_month_spn"
-                                android:layout_width="60dp"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="5dp"
-                                android:padding="10dp"
-                                android:background="@android:color/transparent"
-                                android:gravity="left"
-                                android:spinnerMode="dropdown"/>
-
-                            <ImageView
-                                android:id="@+id/act_pinfo_month_arrow"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentRight="true"
-
-                                android:layout_centerVertical="true"
-                                android:layout_gravity="center"
-                                android:src="@mipmap/dropboxdropdown"/>
-
-                        </RelativeLayout> -->
 
                         <RelativeLayout
                             android:id="@+id/act_pinfo_year_layout"
@@ -331,37 +270,7 @@
                                 android:src="@mipmap/dropboxdropdown"/>
                         </RelativeLayout>
 
-                        <!-- <RelativeLayout
-                            android:id="@+id/act_pinfo_year_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_weight="1"
-                            android:background="@mipmap/dropboxgrey"
-                            android:orientation="horizontal">
 
-                            <Spinner
-                                android:id="@+id/act_pinfo_year_spn"
-                                android:layout_width="90dp"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="5dp"
-                                android:padding="10dp"
-                                android:background="@android:color/transparent"
-                                android:gravity="left"
-                                android:spinnerMode="dropdown"/>
-
-                            <ImageView
-                                android:id="@+id/act_pinfo_year_arrow"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentRight="true"
-                                android:layout_centerVertical="true"
-                                android:layout_gravity="center"
-                                android:src="@mipmap/dropboxdropdown"/>
-
-                        </RelativeLayout> -->
                     </LinearLayout>
 
                 </LinearLayout>

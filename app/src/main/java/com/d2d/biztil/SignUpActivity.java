@@ -88,6 +88,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private void controlEvents() {
 
         act_signup_register_btn.setOnClickListener(this);
+        act_signup_back_iv.setOnClickListener(this);
 
 
     }
@@ -131,6 +132,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                 }
 
+                break;
+
+            case R.id.act_signup_back_iv:
+
+                finish();
                 break;
 
 

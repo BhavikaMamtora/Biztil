@@ -265,7 +265,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             isValidForm = false;
 
         }
-        else if (Methods.isValidEmail(act_login_email_edt.getText().toString()) == false) {
+        else if (Methods.isValidEmail(act_login_email_edt.getText().toString()) == false
+                ) {
 
             Methods.animRedTextMethod(LoginActivity.this, "Please Enter Valid Email");
             isValidForm = false;
