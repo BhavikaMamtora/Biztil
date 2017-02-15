@@ -154,7 +154,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/your_mobile_num"
-                android:inputType="textEmailAddress"
+                android:inputType="phone"
                 android:textAppearance="@style/TextAppearance.App.TextInputLayout"
                 android:textSize="@dimen/normal_textsize"
                 app:met_autoValidate="true"

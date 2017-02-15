@@ -28,24 +28,35 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SplashScreenActivity">
-
-        </activity>
-        <activity android:name=".LoginActivity" android:windowSoftInputMode="stateHidden" >
-        </activity>
-        <activity android:name=".ExceptionHandler.CrashActivity">
-        </activity>
-        <activity android:name=".SignUpActivity" android:windowSoftInputMode="stateHidden">
-        </activity>
-        <activity android:name=".MainActivity" android:windowSoftInputMode="stateHidden">
-        </activity>
-        <activity android:name=".PersonalInfoActivity" android:windowSoftInputMode="stateHidden">
-        </activity>
-        <activity android:name=".BusinessInfoActivity" android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".ExceptionHandler.CrashActivity">
+        </activity>
+        <activity
+            android:name=".SignUpActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".PersonalInfoActivity"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+        <activity
+            android:name=".BusinessInfoActivity"
+            android:windowSoftInputMode="stateHidden">
+
         </activity>
 
     </application>
