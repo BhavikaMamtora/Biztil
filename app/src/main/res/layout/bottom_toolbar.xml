@@ -8,35 +8,42 @@
     android:padding="10dp"
     >
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <ImageView
+        <View
+            android:layout_width="match_parent"
+            android:background="@drawable/line_shadow"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/plus_layout"
+            android:layout_height="1dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/plus_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:src="@mipmap/member_friend"/>
+        android:layout_centerInParent="true"
+        android:background="@drawable/plus_border_circle"
+        android:padding="10dp"
+        >
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:src="@mipmap/fun"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/plus"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:src="@mipmap/member_friend"/>
+    </LinearLayout>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:src="@mipmap/offer"/>
+        <View
+            android:layout_width="match_parent"
+            android:background="@drawable/line_shadow"
+            android:layout_toRightOf="@+id/plus_layout"
+            android:layout_centerVertical="true"
+            android:layout_height="1dp"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:src="@mipmap/cat2"/>
+    </RelativeLayout>
 
 </LinearLayout>
