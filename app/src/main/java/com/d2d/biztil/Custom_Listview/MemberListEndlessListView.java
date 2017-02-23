@@ -75,6 +75,7 @@ public class MemberListEndlessListView extends ListView implements
                 this.addFooterView(footer);
             }
 
+
             isLoading = true;
             listener.loadData();
         }

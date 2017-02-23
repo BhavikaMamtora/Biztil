@@ -96,6 +96,17 @@ public class Web_url_api {
         return url;
     }
 
+    public static final String subCategoriesUrlApi(String catg_id) {
+
+        //    http://biztil.com/android/subcategories.php?categoryid=1
+
+        String url = Basic_Url + "subcategories"
+                + ".php?"+ Json_keys
+                .CATEGORYID + "=" + catg_id;
+
+        return url;
+    }
+
     public static final String otpVerificationUrlApi(String otp, String uid) {
 
         //    https://biztil.com/android/categories.php
@@ -108,5 +119,52 @@ public class Web_url_api {
         return url;
     }
 
+
+    public static final String memberListingUrlApi(String uid) {
+
+        //    http://biztil.com/android/memberlist.php?uid=2
+
+        String url = Basic_Url + "memberlist"
+                + ".php?" + Json_keys.UID + "="
+                + uid;
+
+        return url;
+    }
+
+    public static final String memberListingPaginationUrlApi(String uid,int page) {
+
+        //    http://biztil.com/android/memberlist.php?uid=2
+
+        String url = Basic_Url + "memberlist"
+                + ".php?" + Json_keys.UID + "="
+                + uid + "&" + Json_keys
+                .PAGE + "=" + page;
+
+        return url;
+    }
+
+    public static final String frndRequestUrlApi(String uid) {
+
+        //    http://biztil.com/android/friendrequest.php?uid=2
+
+        String url = Basic_Url + "friendrequest"
+                + ".php?" + Json_keys.UID + "="
+                + uid;
+
+        return url;
+    }
+
+    public static final String frndRequestPaginationUrlApi(String uid,int page) {
+
+        //    http://biztil.com/android/friendrequest.php?uid=2
+
+
+        String url = Basic_Url + "friendrequest"
+                + ".php?" + Json_keys.UID + "="
+                + uid + "&" + Json_keys
+                .PAGE + "=" + page;
+
+        return url;
+    }
 
 }

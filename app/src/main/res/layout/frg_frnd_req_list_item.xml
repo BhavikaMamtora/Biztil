@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f3f3f3"
+                android:padding="5dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <com.d2d.biztil.Helper.RoundedImageView
+            android:id="@+id/frg_frnreq_profile_pic_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            />
+
+
+        <TextView
+            android:id="@+id/frg_frnreq_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/frg_frnreq_accept_btn"
+            android:layout_toRightOf="@+id/frg_frnreq_profile_pic_iv"
+            android:singleLine="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Redfort fashion"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"/>
+
+
+        <Button
+            android:id="@+id/frg_frnreq_accept_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toLeftOf="@+id/frg_frnreq_decline_btn"
+            android:background="@color/selected_color"
+            android:singleLine="true"
+            android:text="Accept"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12dp"/>
+
+
+        <Button
+            android:id="@+id/frg_frnreq_decline_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="3dp"
+            android:background="@color/light_grey_border"
+            android:singleLine="true"
+            android:text="Decline"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12dp"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

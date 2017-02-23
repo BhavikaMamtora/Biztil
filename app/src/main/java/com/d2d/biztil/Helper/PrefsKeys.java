@@ -15,6 +15,8 @@ public class PrefsKeys {
         public static final String IAM = "iam";
         public static final String TYPE = "type";
         public static final String OTP = "otp";
+        public static final String CATEGORY_ID = "category_id";
+        public static final String CATEGORY_NAME = "category_name";
 
 
     }

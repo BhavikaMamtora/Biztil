@@ -7,16 +7,14 @@
     <LinearLayout
         android:id="@+id/container_toolbar"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <include
             android:id="@+id/toolbar"
             layout="@layout/top_toolbar"/>
-
-
     </LinearLayout>
-
 
     <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                             android:id="@+id/drawerLayout"
@@ -32,9 +30,9 @@
 
             <LinearLayout
                 android:id="@+id/middle_toolbar"
-                android:layout_alignParentTop="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
                 android:orientation="vertical">
 
                 <include
@@ -47,34 +45,34 @@
             <FrameLayout
                 android:id="@+id/content_frame"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_above="@+id/bottom_toolbar"
-                android:layout_below="@+id/middle_toolbar"
-                android:layout_height="match_parent"/>
+                android:layout_below="@+id/middle_toolbar"/>
 
 
             <LinearLayout
                 android:id="@+id/bottom_toolbar"
-                android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
                 android:orientation="vertical">
 
                 <include
                     android:id="@+id/toolbar"
-                    layout="@layout/middle_toolbar"/>
-
+                    layout="@layout/bottom_toolbar"/>
 
 
             </LinearLayout>
 
         </RelativeLayout>
 
-        <ExpandableListView
+
+        <ListView
             android:id="@+id/left_drawer"
             android:layout_width="240dp"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:background="#FFFFFF"
+            android:background="#f3f3f3"
             android:childDivider="@android:color/darker_gray"
             android:choiceMode="singleChoice"
             android:divider="@android:color/darker_gray"

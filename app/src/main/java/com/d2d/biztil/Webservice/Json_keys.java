@@ -23,22 +23,26 @@ class Json_keys {
     public static final String IAM = "iam";
     public static final String TYPE = "type";
     public static final String OTP = "otp";
-
-
     public static final String COUNTRY = "country";
     public static final String STATE = "state";
     public static final String CITY = "city";
     public static final String DAY = "day";
     public static final String MONTH = "month";
     public static final String YEAR = "year";
-
-
     public static final String BUSINESSNAME = "businessname";
     public static final String BUSINESSTYPE = "businesstype";
     public static final String BUSINESSCATEGORY = "businesscategory";
-
     public static final String CATEGORYID = "categoryid";
-
+    public static final String MEMBERID = "memberid";
+    public static final String PROFILEPIC = "profilepic";
+    public static final String COMPANY = "company";
+    public static final String RATING = "rating";
+    public static final String MEMBERCATEGORY = "membercategory";
+    public static final String FRIENDSTATUS = "friendstatus";
+    public static final String PAGE = "page";
+    public static final String SUBCATEGORYID = "subcategoryid";
+    public static final String MEMBERNAME = "membername";
+    public static final String TIMEAGO = "timeago";
 
 
 

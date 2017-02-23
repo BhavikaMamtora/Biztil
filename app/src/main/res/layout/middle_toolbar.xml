@@ -9,35 +9,42 @@
     >
 
     <ImageView
+        android:id="@+id/left_drawer_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:src="@mipmap/cat1"/>
     <ImageView
+
+        android:id="@+id/business_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:src="@mipmap/business"/>
 
     <ImageView
+        android:id="@+id/fun_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:src="@mipmap/fun"/>
 
     <ImageView
+        android:id="@+id/member_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:src="@mipmap/member_friend"/>
 
     <ImageView
+        android:id="@+id/offer_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:src="@mipmap/offer"/>
 
     <ImageView
+        android:id="@+id/right_drawer_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"

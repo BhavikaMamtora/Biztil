@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -67,18 +68,38 @@ class Member_Adapter extends BaseAdapter {
         // TODO Auto-generated method stub
         Holder holder = new Holder();
         View   rowView;
-        rowView = inflater.inflate(R.layout.act_main, null);
-//        holder.tr_provider_oid = (TextView) rowView.findViewById(R.id.tr_provider_oid);
-//        holder.tr_provider_img = (ImageView) rowView.findViewById(R.id.tr_provider_img);
+        rowView = inflater.inflate(R.layout.frg_member_list_item, null);
 
-        //holder.tr_provider_oid.setText("Order Id: " + tr_array.get(position).getTr_orderid());
-//        holder.tr_provider_img.setTag(tr_array
-//                                              .get(position).getTr_providerimg());
-//        ImageView image = holder.tr_provider_img;
-//        Picasso.with(context)
-//               .load(tr_array
-//                             .get(position).getTr_providerimg())
-//               .into(image);
+        // Initialization
+        holder.frg_ml_company_tv = (TextView) rowView.findViewById(R.id.frg_ml_company_tv);
+        holder.frg_ml_location_tv = (TextView) rowView.findViewById(R.id.frg_ml_location_tv);
+        holder.frg_ml_category_tv = (TextView) rowView.findViewById(R.id.frg_ml_category_tv);
+        holder.frg_ml_star_tv = (TextView) rowView.findViewById(R.id.frg_ml_star_tv);
+
+
+        holder.frg_ml_pic_iv = (ImageView) rowView.findViewById(R.id.frg_ml_pic_iv);
+        holder.frg_ml_star_1 = (ImageView) rowView.findViewById(R.id.frg_ml_star_1);
+
+        holder.frg_ml_view_product_btn = (Button) rowView.findViewById(R.id.frg_ml_view_product_btn);
+        holder.frg_ml_msg_btn = (Button) rowView.findViewById(R.id.frg_ml_msg_btn);
+        holder.frg_ml_add_frnd_btn = (Button) rowView.findViewById(R.id.frg_ml_add_frnd_btn);
+
+
+        // data set
+
+        holder.frg_ml_company_tv.setText(tr_array.get(position).getCompany());
+        holder.frg_ml_location_tv.setText(tr_array.get(position).getCity());
+        holder.frg_ml_category_tv.setText(tr_array.get(position).getMembercategory());
+        holder.frg_ml_star_tv.setText(tr_array.get(position).getRating());
+        holder.frg_ml_add_frnd_btn.setText(tr_array.get(position).getFriendstatus());
+
+        holder.frg_ml_pic_iv.setTag(tr_array
+                                              .get(position).getProfilepic());
+        ImageView image = holder.frg_ml_pic_iv;
+        Picasso.with(context)
+               .load(tr_array
+                             .get(position).getProfilepic())
+               .into(image);
 
 
         return rowView;
@@ -86,8 +107,10 @@ class Member_Adapter extends BaseAdapter {
 
     public
     class Holder {
-        TextView tr_provider_oid;
-        ImageView tr_provider_img;
+        TextView frg_ml_company_tv,frg_ml_location_tv,frg_ml_category_tv,frg_ml_star_tv;
+        ImageView frg_ml_pic_iv,frg_ml_star_1,frg_ml_star_2,frg_ml_star_3,frg_ml_star_4,frg_ml_star_5;
+        Button frg_ml_view_product_btn,frg_ml_msg_btn,frg_ml_add_frnd_btn;
+
     }
 
 }

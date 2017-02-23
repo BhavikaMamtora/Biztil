@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f3f3f3"
+                android:padding="5dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/frg_ml_pic_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/frg_ml_pic_iv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@color/selected_color"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/frg_ml_pic_layout"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/frg_ml_company_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Redfort fashion"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/frg_ml_star_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/yeallowstar"
+                    />
+                <TextView
+                    android:id="@+id/frg_ml_star_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:singleLine="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/unselected_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/frg_ml_location_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/map"
+                    />
+                <TextView
+                    android:id="@+id/frg_ml_location_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ahmedabad"
+                    android:singleLine="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/unselected_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/frg_ml_category_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/category"
+                    />
+                <TextView
+                    android:id="@+id/frg_ml_category_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="T shirt Manufacturer"
+                    android:layout_marginLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/unselected_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_height="20dp">
+
+                <Button
+                    android:id="@+id/frg_ml_view_product_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="View all Products"
+                    android:drawableLeft="@mipmap/viewallproducts_small"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="3dp"
+                    android:singleLine="true"
+                    android:textSize="8dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/corner_small_blue_btn"/>
+
+                <Button
+                    android:id="@+id/frg_ml_msg_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Message"
+                    android:layout_weight="1"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:textAllCaps="false"
+                    android:singleLine="true"
+                    android:textSize="8dp"
+                    android:drawableLeft="@mipmap/message_small"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/corner_small_blue_btn"/>
+
+
+                <Button
+                    android:id="@+id/frg_ml_add_frnd_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Friend"
+                    android:singleLine="true"
+                    android:textAllCaps="false"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:textSize="8dp"
+                    android:drawableLeft="@mipmap/addfriend_small"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:background="@drawable/corner_small_blue_btn"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
